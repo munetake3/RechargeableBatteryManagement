@@ -1,4 +1,18 @@
 services:
+  app:
+    container_name: rechargeable_battery_management_app
+    build: ./app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/rechargeable_battery_management
+      SPRING_DATASOURCE_USERNAME: $DB_USER
+      SPRING_DATASOURCE_PASSWORD: $DB_PASSWORD
+    depends_on:
+      - db
+
   db:
     container_name: rechargeable_battery_management_db
     image: postgres:14
@@ -7,6 +21,6 @@ services:
     volumes:
       - ./db/data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: $DB_USER
       POSTGRES_PASSWORD: $DB_PASSWORD
       POSTGRES_DB: rechargeable_battery_management
