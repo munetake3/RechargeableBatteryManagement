@@ -23,7 +23,7 @@
    コンテナを起動するコマンド:  
    `docker compose up -d`  
    起動後は以下のURLでサービスにアクセスできる。
-   - `http://localhost:8000`: Spring Boot アプリケーション
+   - `http://localhost:8080`: Spring Boot アプリケーション
    - `http://localhost:5432`: PostgreSQL データベースサーバー
 
 ## 技術スタック
