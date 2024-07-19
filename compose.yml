@@ -1,4 +1,12 @@
 services:
+  frontend:
+    container_name: rechargeable_battery_management_frontend
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+
   app:
     container_name: rechargeable_battery_management_app
     build: ./app
