@@ -23,6 +23,7 @@
    コンテナを起動するコマンド:  
    `docker compose up -d`  
    起動後は以下のURLでサービスにアクセスできる。
+   - `http://localhost:3000`: React アプリ
    - `http://localhost:8080`: Spring Boot アプリケーション
    - `http://localhost:5432`: PostgreSQL データベースサーバー
 
@@ -30,7 +31,9 @@
 
 - Docker: 25.0.3
 - Frontend
-  - React
+  - Node: 20.15.1
+    - npm: 10.7.0
+  - React: 18.3.1
 - Backend
   - Java(OpenJDK): 21
   - Spring Boot: 3.3.1
