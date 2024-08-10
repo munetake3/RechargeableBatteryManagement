@@ -1,6 +1,8 @@
 // src/ButtonTest.tsx
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 const ButtonTest = () => {
   const [text, setText] = useState('');
@@ -11,8 +13,8 @@ const ButtonTest = () => {
 
   return (
     <div>
-      <Button variant='primary' onClick={buttonClick}>ボタン</Button>
-      <p>{text}</p>
+      <Button variant="primary" onClick={buttonClick} id="track-button">Click me!!</Button>
+      <div id="track-text">{text}</div>
     </div>
   );
 };
