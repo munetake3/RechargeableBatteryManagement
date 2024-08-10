@@ -31,8 +31,8 @@
 
 - Docker: 25.0.3
 - Frontend
-  - Node: 20.15.1
-    - npm: 10.7.0
+  - Node: 20.16.0
+    - npm: 10.8.1
   - React: 18.3.1
 - Backend
   - Java(OpenJDK): 21
